@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hani’s flower</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- banner -->
+    <section id="banner">
+      <!-- alAn mikham bakhshe awwale website, bakhshi ke banner dashtim ro dorost konam.
+        man kollan mamoolan, bakhshhaye website am ro ba tag section misazam wa az ham joda mikonam.
+        wa baraye har section ham miaym, id e moshakhas be oun bakhsh ro barash moshakhas mikonim
+
+        hala baad az banner, touye hamin tag e section, logomoun ro ham ba tag img ezafe mikonim.
+        alAn ba in tag img, logo ezafe shode, wali khob bozorgtar az oun chizie ke mikhaym, pass barash ye class tarif mikonim, wa baad mirim dar file css ta style bedim behesh 
+
+        khob man alAn mikham ye matn be safhe ezafe konam, wa matn ro rouye taswir ham namayesh bedam pas az yek tag e div estefade mikonim, va baad h1
+        -->
+      <img class="logo" src="photos/logo.jpg" alt="logo" />
+      <div class="banner-text">
+        <h1>Hani’s Flower</h1>
+        <p>life is short, buy a flower</p>
+
+        <!-- hala haminja, zire hamin text ha mikham do ta button ezafe konam. aval ye div bezar, baad do ta tage a bezar, chon mikham ke beshe roushoun click kard, roushoun href mizaram, wali chon felan jaye khassi nemikham befrestam, faghat hashtag mizarim toush-->
+        <div class="banner-buttons">
+          <a href="#"><span></span>Find Out</a>
+          <a href="#"><span></span>Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- navbar -->
+    <div id="navbar">
+      <!-- nav bar ro ba tag e nav dorost mikonim, wa baad dakhelesh az tag e lis-->
+      <nav>
+        <!-- unordered list -->
+        <ul>
+          <!-- chon mikham gozine ham click able bashan, dakhele list item az tag a a stefade miknim-->
+          <li><a href="#"> HOME </a></li>
+          <li><a href="#"> FEATURES </a></li>
+          <li><a href="#"> SERVICES </a></li>
+          <li><a href="#"> TESTIMONIALS </a></li>
+          <li><a href="#"> MEET US </a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- hala ye icon baraye menu moun (navbar) ezafe mikonim-->
+    <div id="nav-icon-div">
+      <img src="photos/nav-icon.png" alt="nav-icon" id="menu-img" />
+    </div>
+
+    <!-- features -->
+    <section id="feature">
+      <div class="title-div">
+        <p>FEATURES</p>
+        <h1>Why Choose Us</h1>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-text">
+          <h2>Experienced Staff</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+            praesentium sapiente tempore alias? Aliquam id perferendis, ut hic
+            aspernatur ullam non nihil!
+          </p>
+        </div>
+
+        <div class="feature-image">
+          <img src="photos/staff1.jpg" alt="staff1" />
+        </div>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section id="service">
+      <div class="title-div">
+        <p>SERVICES</p>
+        <h1>We Provide Better</h1>
+      </div>
+
+      <div class="service-box">
+        <div class="single-service">
+          <img src="photos/service1.jpg" alt="service1" />
+        </div>
+        <div class="single-service">
+          <img src="photos/service2.jpg" alt="service2" />
+        </div>
+        <div class="single-service">
+          <img src="photos/service3.jpg" alt="service3" />
+        </div>
+        <div class="single-service">
+          <img src="photos/service4.jpg" alt="service4" />
+        </div>
+      </div>
+    </section>
+
+    <!-- hala bar a inke menu e navbar ba click rouye nav-icon bazo baste beshe, niaz be js darim-->
+    <script>
+      //tamame oun bakhshhayi ke gharare to js dargir bashan ro be sourat e variable tarif mikonim
+      var navbar = document.getElementById("navbar");
+      var nav_icon_div = document.getElementById("nav-icon-div");
+      var menu_img = document.getElementById("menu-img");
+
+      // dar file css mibinim, arz e navbar ro 200px gozashtim, pass mikhaym ke be andazeye hamin 200px menu moun baz o baste beshe
+
+      // waghti ro safhe miraftam bara awalin bar, bayad 2bar click mikardam ta menu baz she, ba in khatte payin moshkel hal mishe wa faghat ye click mikhad baad az woroud be site
+      navbar.style.right = "-200px";
+      nav_icon_div.onclick = function () {
+        // 200px be samte rast mire, ke yani az tasvir kharej mishe
+        if (navbar.style.right == "-200px") {
+          navbar.style.right = "0";
+          // hala mikham waghti menu baz hast, akse dokme avaz beshe
+          menu_img.src = "photos/close-icon.png";
+        } else {
+          navbar.style.right = "-200px";
+          menu_img.src = "photos/nav-icon.png";
+        }
+      };
+      // hala ba in code, js kar mikone wa navbar mire o miad ba clicke wali dota eshkar wojoud dar. 1) inke waghti website baz mishe menu ounja hastesh wa ba click baste mishe. 2) inke menu kheyli khoshk bazo baste mishe, bayad narmesh kar. ke hardo ro to css hal mikonim
+    </script>
+  </body>
+</html>

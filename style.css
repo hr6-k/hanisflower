@@ -1,0 +1,345 @@
+/* waghti az star estefade mikonim, style i ke toush midim, rouye kolle projec etmoun ejra mishe*/
+/* margin va padding e 0 midim, chon nemikhom kolle safhamoun hich hashiye i dashte bashe*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*##########################################
+banner #####################################
+############################################*/
+
+/* dar css, id ro ba hashtag farakhouni mikonim
+ma mikhaym awal az hame ye background bedim be banneremoun.
+
+ye aks be onwane background, pas url midam wa miram soraghe akse khodemoun
+
+background size ro mizaram ro halate cover, ke kolle safte ro pushesh bede
+
+ye background position ham barash moshakhas mikonam, wa mizaramesh rouye center
+
+ye ertefa ham be in section midim. be in section ertefa nadi hichi ro neshoun nemide, toysh text ke nadar, chize dige ham neshoun nemide khob. in ertefa ertefae section hastesh
+
+ba dadane gradient, mitouni ye pallet e rangi rouye akset bendazi ke kheyli aks ro bahal mikone. baraye daden oun, khatte aval ke background hastesh ro comment mikonam wa daghighan ziresh ba gradient mizaram to ghabll o baad ro motevajje beshi chetor code bezani
+*/
+#banner {
+  /* ghabl az dadane gradient ->  background: url(photos/banner.jpg); */
+  background: linear-gradient(rgba(0, 0, 0.5, 0.5), #384b4029),
+    url(photos/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* logo
+class ro ba dor farakhani mikonim
+barash ye arz mizarim, width
+
+ye position behesh midim, absoloute
+(ye tozihe jaleb ham inja, baraye inke befahmi absolute yani chi: ->   An absolutely positioned element is an element whose computed position value is absolute or fixed . The top , right , bottom , and left properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.)
+
+faselesh ro az balaye safte 4% dar nazar migirim,
+wa az samte chap e safhe 5%
+*/
+.logo {
+  width: 140px;
+  position: absolute;
+  top: 6.5%;
+  left: 3%;
+  border-radius: 5px;
+}
+
+/* man mikham kolle text am wasate safhe bashe, pas behesh text align ro center midam
+ye rang ham mikham be in text bedam bo color
+
+wa nahayatan, ye padding e 180 pexel ham behesh midam, ke biad payin.
+tawajjoh kon ke agar bedoune in style in text ro ba refresh dide boudi, samte chap balaye bala chasbide miboud. ke alAn ba dadane ye padding az bala, mikeshimesh payin
+*/
+.banner-text {
+  text-align: center;
+  color: aliceblue;
+  padding-top: 280px;
+}
+
+/* hala hamin class ro dobare farakhani mikonim, wali inbar faghat mokhtasse tage hr
+
+ba font size, andazeye matn ya haman font ro bozorgtar mikonim*/
+.banner-text h1 {
+  font-size: 80px;
+  font-family: "Kaushan Script", cursive;
+}
+
+.banner-text p {
+  font-size: 30px;
+  font-style: italic;
+  /*font-family: "Poppins", sans-serif;*/
+}
+
+/* khode div e buttons dar banner*/
+.banner-buttons {
+  margin: 70px;
+}
+/* khode dokme ha dar tage a div e buttons
+ba text decoration mitounim oun underline e payin ro az beyn bebarim
+in dastane display ke inline block tanzim shode ro bayad check konam bishtar rou net ta master besham, wali inja baEs mishe do ta dokme az ham fasele begiran dar haman khatte ofoghi ke ba ham hastan
+**** in display inline block baEs mishe, matn e daroun e dokme, ghashang az border e dokme fasele begire wa margin o padding rosh taAsir kone wa kheyli ziba beshe */
+.banner-buttons a {
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  /*ba in color, range font ro sefid mikonim*/
+  color: aliceblue;
+  /*wa ye border ham behesh midim ke nim exel bashe wa solid wa range border ham sefid bashe*/
+  border: 0.5px solid aliceblue;
+  /*baad az gozashtane position baraye tag e span dar in payin ke absolout gozashtam niaz daram ke inja ham position tarif konam wa bezaramesh retalive.*/
+  position: relative;
+  /*tozihate in dar payin hastesh ke z index chikar mikone*/
+  z-index: 1;
+  /* in transition baEs mishe ke in  tabdile range font be siah ke dar halate hover kardan e payin moshakhas kardim nim saniye bekeshe*/
+  transition: 0.3s;
+}
+
+/* hala mikham wase button hayi ke darim ye seri effect ijad konam.
+baraye in kar mirim be file html, be tage a wa dakhelesh ye tag e span ezafe mikonim, baraye inke betounim behesh style bedim
+tawajjoh kon ke tage span ghabl az text e mojud dar tag e a hastesh wa dakhele tag span khalie. wa mesle zir az classe marboute warede tag clas wa tag e a wa baadesh tag e span mishim*/
+.banner-buttons a span {
+  /*ye arz barash tayin mikonim, ke mizarim 50 darsad.
+  in 50 darsad wase test kardan boud. alAn ino mikonam 0 darsad ke bere kenar kollan, baad in payin hamin dastan ro entekhab mikonam wali dar halat e hover e tag e a wa ounja width e in span ro ba hover kardan ziad mikonam, wa range text e tag e a ro ham bar migardounam be meshke ke chon ba z indes oftade balase span, ghabele didan beshe*/
+  width: 0;
+  /* ye height barash tayin mikonam wa mizaram 100 darsa, ke a00 darsad e ertefaE tag a (dokme) ro begire*/
+  height: 100%;
+  /*ye position barash mizarim wa mizaramesh absolute. waghti in ro gozashti absoloute bayad beram bala wa dar tag e a ye position tarif konam wa bezaramesh relative ta tag ham nesbat be ham betounan taghyir konan.
+    in ro bekhoun bahale: https://adminesite.com/css-positions/   */
+  position: absolute;
+  /* fasele az bala wa az chap ro sefr midam behesh*/
+  top: 0;
+  left: 0;
+  /* ye range back gorund ham behesh midam*/
+  background: aliceblue;
+
+  /* ye z index be in midam -1, wa miram bala ye z index midam be tag e a 1. ke in z index olawiyate item ha ro nesbat be ham moshakhas mikone.
+  https://free-learn.ir/%D9%88%DB%8C%DA%98%DA%AF%DB%8C-z-index-%D8%AF%D8%B1-css/
+    ba in z index alAn in span ro andakhtim zire text e tag a e, faghat bayad rang e text e tag e a ro baad az hover kardan siah konim ke rouye sefid moshakhas she
+  */
+  z-index: -1;
+  /* in transition baEs mishe ke in  tabdile range font be siah ke dar halate hover kardan e width e span ke baad az hover kardan anjam mishe nim saniye mikeshe. in zaman ro ba bala baraye tag e a yeki mizarim ke dar yek faseleye zamanie barabar width ziad beshe wa rang sia beshe wa range font siah she*/
+  transition: 0.3s;
+}
+
+/*tozih dar belock e ghab hast, in halat baraye taghyirat dar halate hover kardan rouye tag e a ya haman button hastesh. ke ba in havoer, taghyirat rouye soan anjam mishe. baraye hamin spam oumade oun akhar*/
+.banner-buttons a:hover span {
+  width: 100%;
+}
+
+/*tozih dar do block ghabl oumade. wali inja mikhaym waghti hover shod roye dokme, hamin matne dokme ya tag e a rangesh awaz she. pas dige mesle ghabl niaz be span ndarim.*/
+.banner-buttons a:hover {
+  /*in color rang e font ya hamoun text hastesh*/
+  color: black;
+}
+
+/*##########################################
+end of banner ##############################
+############################################*/
+
+/*##########################################
+navbar #####################################
+############################################*/
+
+#navbar {
+  width: 200px;
+  height: 100vh;
+  /*nemikham az jash tekoun bokhore*/
+  position: fixed;
+  /* mikham ke az bala wa az samte rast faseleyi nadashte bashe*/
+  top: 0;
+  right: 0;
+  /*ye background color ham barash mizarim*/
+  background-color: aliceblue;
+
+  /*z index ro midam 2 ke baEs she navbar biyad rouye kolle safhe gharar begire*/
+  z-index: 2;
+
+  /*baad az dastane js ke bara navbar neweshtim, ino miaym mizarim -200 ke yani waghti miyaym to safhe, ghablesh khodesh navbar namaryi (ya hamon 200 ta samte rast kharej kharej az frame e website hastesh)*/
+  right: -200px;
+  /* wa barash transition tarif mikonim ta ba click narm bazo baste beshe*/
+  transition: 0.5s;
+}
+
+nav ul {
+  margin-top: 70px;
+}
+
+/*hala mikham ke navbar ro eslah konam ke shabihe menu bashe, na shabihe link haye zire ham*/
+
+nav ul li {
+  /*list style ro none mizarim ke chizi kenare listemoun namayesh dade nashe. oun bollet point ha ro hazf mikone*/
+  list-style: none;
+  /*tamame li ha az ham fasele migiran wa khotout baz baz gharar migiran*/
+  margin: 50px 20px;
+}
+
+nav ul li a {
+  /*khatte zire link ha ro pak mikone*/
+  text-decoration: none;
+  /*rang e text*/
+  color: black;
+}
+
+#nav-icon-div {
+  width: 50px;
+  height: 50px;
+  background: aliceblue;
+  /*position ro ke fix bedam, nesbat be safheye monitor dar nazar migire, wa kari nadare ke ghablo badesh chie, miad bala, engar hich componenti ghablesh nist*/
+  position: fixed;
+  text-align: center;
+  /*fasele az rast wa bala*/
+  top: 6.5%;
+  right: 3%;
+
+  border-radius: 5px;
+  z-index: 3;
+  /*ba in cursor, mouse ke biad roush, halat e angosht wa click kardani mishe*/
+  cursor: pointer;
+}
+
+#nav-icon-div img {
+  width: 35px;
+  height: 35px;
+  margin-top: 7.5px;
+}
+
+/*##########################################
+end of navbar ##############################
+############################################*/
+
+/*##########################################
+features ###################################
+############################################*/
+
+#feature {
+  /*ye width e 100% barash mizarim ta chizi dige natoune kenaresh biyad*/
+  width: 100%;
+  padding: 70px 0;
+}
+
+.title-div {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.title-div p {
+  margin: auto;
+  font-size: 20px;
+  /* color: aliceblue; */
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.title-div p::after {
+  /* 
+    In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
+    
+    https://css-tricks.ir/tutorial/after-%D9%88-before-%D8%AF%D8%B1-css/  
+    
+    https://www.w3schools.com/cssref/sel_after.php
+    
+    */
+  content: "";
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(#9dc08b, aliceblue);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+  transform: rotate(10deg);
+  border-bottom-right-radius: 35px;
+  border-top-left-radius: 35px;
+}
+
+.title-div h1 {
+  font-size: 50px;
+}
+
+.feature-box {
+  /* mikham ke 80% az arze safhamon ro begire*/
+  width: 80%;
+  margin: auto;
+
+  /* کاربرد display flex
+  https://www.aryatehran.com/flexbox-%D8%AF%D8%B1-css/
+  */
+  display: flex;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap */
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-text {
+  flex-basis: 50%;
+}
+
+.feature-image {
+  flex-basis: 50%;
+  margin: auto;
+}
+
+.feature-image img {
+  width: 70%;
+  border-radius: 10px;
+}
+
+.feature-text h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.feature-text p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20%;
+}
+
+/*##########################################
+end of features ############################
+############################################*/
+
+/*##########################################
+services ###################################
+############################################*/
+
+#service {
+  width: 100%;
+  padding: 70px 0;
+  background: #efefef;
+}
+
+.service-box {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  /*  https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content  */
+  justify-content: space-around;
+  margin: auto;
+}
+
+.single-service {
+  /* in khatte pyin baEs mishe ke man betounam 2 ta ax touye har radifam dashte basham */
+  flex-basis: 48%;
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  color: aliceblue;
+}
+
+.single-service img {
+  width: 100%;
+  border-radius: 7px;
+}
