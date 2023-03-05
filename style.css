@@ -337,9 +337,58 @@ services ###################################
   border-radius: 7px;
   margin-bottom: 20px;
   color: aliceblue;
+  /*waghti be class e overlay position e absoloute datam, niaze ke biam inja o ye class e relative be in bedam*/
+  position: relative;
 }
 
 .single-service img {
   width: 100%;
   border-radius: 7px;
+}
+
+/* khob hala ke aks ha ro roye safhe darim, mikham ke waghti mouse ro miyaram roshoun, ye over lay e rang roush ijad beshe
+waghti mouse miyad roush, ye rang biyad roush wa ye matni ro behemoun neshoun bede*/
+.overlay {
+  /*tool o arzesh ro mizaram 100 darsad, chon mikham kolle aksam ro begire*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #250029);
+  /*hala ta haminja ro save koni o check koni, mibini ke ye layeye rang rouye hameye aks ha hastesh, wali khob ma nemikhaym intor bashe. mikhaym waghti mouse ro rouye aks awordim be in halat dar ad. pas inja opacity e 0 bede, in payin an class e single service ro miyarim wa migim dar halat e hover, overlay ro begir wa opacity ro 1 kon*/
+  opacity: 0;
+  transition: 1s;
+}
+
+/*in yani dar halat e addi opacity moun sefr hastesh, waghti mouse mire rosh mikonatesh 1*/
+.single-service:hover .overlay {
+  opacity: 1;
+}
+
+.service-description {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1s;
+}
+.single-service:hover .service-description {
+  bottom: 30%;
+  opacity: 1;
+}
+
+hr {
+  background: aliceblue;
+  height: 1px;
+  border: 0;
+  margin: 15px auto;
+  width: 60%;
+}
+
+.single-service p {
+  font-size: 14px;
 }
