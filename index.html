@@ -16,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@1,200&display=swap"
       rel="stylesheet"
     />
+    <!--   
+    in ro google kon: smooth scroll js cferdinandi
+    warede awalin link sho wa az ghesmate CDN in ro copy kon
+    copy shode az:  https://github.com/cferdinandi/smooth-scroll   
+     wa oun bakhshe scroll speed ro ham click kon ke kheyli bahale-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
 
   <body>
@@ -50,11 +56,12 @@
         <!-- unordered list -->
         <ul>
           <!-- chon mikham gozine ham click able bashan, dakhele list item az tag a a stefade miknim-->
-          <li><a href="#"> HOME </a></li>
-          <li><a href="#"> FEATURES </a></li>
-          <li><a href="#"> SERVICES </a></li>
-          <li><a href="#"> TESTIMONIALS </a></li>
-          <li><a href="#"> MEET US </a></li>
+          <!-- alAn man mikham waghti home ro click kardam, balaye safhe banner ro neshoun bede, pass id e tag section ke banner boud ro copy kon inja dar ghesmat e href-->
+          <li><a href="#banner"> HOME </a></li>
+          <li><a href="#feature"> FEATURES </a></li>
+          <li><a href="#service"> SERVICES </a></li>
+          <li><a href="#testimonials"> TESTIMONIALS </a></li>
+          <li><a href="#footer"> MEET US </a></li>
         </ul>
       </nav>
     </div>
@@ -261,6 +268,12 @@
         }
       };
       // hala ba in code, js kar mikone wa navbar mire o miad ba clicke wali dota eshkar wojoud dar. 1) inke waghti website baz mishe menu ounja hastesh wa ba click baste mishe. 2) inke menu kheyli khoshk bazo baste mishe, bayad narmesh kar. ke hardo ro to css hal mikonim
+
+      // All animations will take exactly 500ms
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        speedAsDuration: true,
+      });
     </script>
   </body>
 </html>
