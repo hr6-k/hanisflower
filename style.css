@@ -392,3 +392,70 @@ hr {
 .single-service p {
   font-size: 14px;
 }
+
+/*##########################################
+end of testimonials ########################
+############################################*/
+
+/*##########################################
+testimonials ###############################
+############################################*/
+
+#testimonials {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.testimonial-row {
+  width: 80%;
+  margin: auto;
+  /* age alAn ta inja ro check koni, khotout(div ha) zire ham an, ba dadane display flex, 3 ta div mian kenare ham wa ba justify content ye faseleyi beyneshoun miad*/
+  display: flex;
+  /*
+  https://free-learn.ir/%D9%88%DB%8C%DA%98%DA%AF%DB%8C-justify-content-%D8%AF%D8%B1-css/ 
+  */
+  justify-content: space-between;
+  align-items: flex-start;
+  /*
+  in flex wrap dobare hame ro aword touye ye khat, chera intori code mizane ro nemidounam
+  https://free-learn.ir/%D9%88%DB%8C%DA%98%DA%AF%DB%8C-flex-wrap-%D8%AF%D8%B1-css/
+  */
+  flex-wrap: wrap;
+}
+
+.testimonial-col {
+  /* hala ba in khat dobare 3 sotoune shod
+  https://free-learn.ir/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%88%DB%8C%DA%98%DA%AF%DB%8C-flex-basis-%D8%AF%D8%B1-css/
+  */
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #00968814;
+  cursor: pointer;
+  /*waghti pazin transform dadam dar halat e cover, miyam inja wa ransition midam*/
+  transition: 0.5s;
+}
+
+.testimonial-col p {
+  font-size: 14px;
+}
+
+.customer-photos {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.customer-photos img {
+  width: 130px;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+
+/* hala mikham ba awordan e mouse rouye har kodoum az box haye moshtari yemak jabeja beshe ke jalbe tawajjoh bokone*/
+.testimonial-col:hover {
+  /* hala dar edame chon mikham bala payin bokonam bax am ro, ye transform behesh midam.
+  transform ro translate Y behesh midam, yani mikham bala payinesh bokonam*/
+  transform: translateY(-4 px);
+}
