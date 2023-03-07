@@ -394,7 +394,7 @@ hr {
 }
 
 /*##########################################
-end of testimonials ########################
+end of services ########################
 ############################################*/
 
 /*##########################################
@@ -434,7 +434,7 @@ testimonials ###############################
   box-shadow: 0 10px 20px 3px #00968814;
   cursor: pointer;
   /*waghti pazin transform dadam dar halat e cover, miyam inja wa ransition midam*/
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 .testimonial-col p {
@@ -457,5 +457,52 @@ testimonials ###############################
 .testimonial-col:hover {
   /* hala dar edame chon mikham bala payin bokonam bax am ro, ye transform behesh midam.
   transform ro translate Y behesh midam, yani mikham bala payinesh bokonam*/
-  transform: translateY(-4 px);
+  transform: translateY(-4px);
+}
+
+/*##########################################
+end of testimonials ########################
+############################################*/
+
+/*##########################################
+footer #####################################
+############################################*/
+
+#footer {
+  padding: 100px 20px 0;
+  background: #efefef;
+}
+
+.footer-row {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*intor be chand class style e yeksan bede*/
+.footer-left,
+.footer-right {
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/*footer right ro kaamel mibarim samte rast*/
+.footer-right {
+  text-align: right;
+}
+
+.footer-row h3 {
+  margin: 10px 0;
+}
+
+/*faaseleye beyne khotout ro mishe intor bishtar kard*/
+.footer-row tr {
+  line-height: 20px;
+}
+
+.footer-right address {
+  line-height: 20px;
 }
